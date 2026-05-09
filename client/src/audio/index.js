@@ -55,6 +55,13 @@ export function useSounds(soundTheme) {
   const init = useCallback(async () => {
     const st = SOUND_THEMES[themeRef.current] || SOUND_THEMES.modern;
     if (initRef.current && lastInitTheme.current === themeRef.current) return;
+    // Android: isompi buffer vähentää särinää (default 128 on liian pieni joillekin laitteille)
+    if (/android/i.test(navigator.userAgent) && Tone.context?.rawContext?.sampleRate) {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)({ latencyHint: "playback" });
+        Tone.setContext(new Tone.Context(ctx));
+      } catch {}
+    }
     await Tone.start();
     if (initRef.current) {
       try { synthRef.current?.dispose(); } catch {}
@@ -63,7 +70,7 @@ export function useSounds(soundTheme) {
     }
     initRef.current = true;
     lastInitTheme.current = themeRef.current;
-    synthRef.current = new Tone.PolySynth(Tone.Synth, st.synth).toDestination();
+    synthRef.current = new Tone.PolySynth(Tone.Synth, { maxPolyphony: 8, ...st.synth }).toDestination();
     bassRef.current = new Tone.Synth(st.bass).toDestination();
     const btnFilter = new Tone.Filter({ frequency: st.btnFilter, type: "lowpass" }).toDestination();
     btnNoiseRef.current = new Tone.NoiseSynth(st.btn).connect(btnFilter);
@@ -75,9 +82,15 @@ export function useSounds(soundTheme) {
     await init();
   }, [init]);
 
+  const lastPlayRef = useRef(0);
   const playSynthNotes = useCallback((notesFn) => {
     if (!synthRef.current) return;
     const n = Tone.now();
+    // Vapauta vanhat äänet jos edellisestä soitosta <150ms (nopea peräkkäinen soitto)
+    if (n - lastPlayRef.current < 0.15) {
+      try { synthRef.current.releaseAll(n); } catch {}
+    }
+    lastPlayRef.current = n;
     const result = notesFn(n);
     if (Array.isArray(result)) {
       result.forEach(args => synthRef.current.triggerAttackRelease(...args));
