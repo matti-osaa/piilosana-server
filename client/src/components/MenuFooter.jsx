@@ -33,16 +33,25 @@ const TEXTS = {
     loading: "Ladataan sanalistaa...",
     feedback: "Palaute",
     privacy: "Tietosuoja",
+    terms: "Käyttöehdot",
+    about: "Tietoja",
+    howToPlayPage: "Ohjeet",
   },
   sv: {
     loading: "Laddar ordlistan...",
     feedback: "Feedback",
     privacy: "Integritet",
+    terms: "Villkor",
+    about: "Om",
+    howToPlayPage: "Guide",
   },
   en: {
     loading: "Loading word list...",
     feedback: "Feedback",
     privacy: "Privacy",
+    terms: "Terms",
+    about: "About",
+    howToPlayPage: "Guide",
   },
 };
 
@@ -217,7 +226,7 @@ export function MenuFooter({
         v{version} · © Matti Kuokkanen 2026
       </div>
 
-      {/* Palaute + Tietosuoja */}
+      {/* Palaute + Tietosuoja + Käyttöehdot + Tietoja + Ohjeet */}
       <div
         style={{
           fontSize: "12px",
@@ -225,6 +234,7 @@ export function MenuFooter({
           display: "flex",
           gap: "10px",
           justifyContent: "center",
+          flexWrap: "wrap",
         }}
       >
         <a
@@ -234,10 +244,28 @@ export function MenuFooter({
           {txt.feedback}
         </a>
         <a
-          href="/privacy"
+          href="/tietosuoja.html"
           style={{ color: S.textMuted + "88", textDecoration: "none" }}
         >
           {txt.privacy}
+        </a>
+        <a
+          href="/kayttoehdot.html"
+          style={{ color: S.textMuted + "88", textDecoration: "none" }}
+        >
+          {txt.terms}
+        </a>
+        <a
+          href="/tietoja.html"
+          style={{ color: S.textMuted + "88", textDecoration: "none" }}
+        >
+          {txt.about}
+        </a>
+        <a
+          href="/ohjeet.html"
+          style={{ color: S.textMuted + "88", textDecoration: "none" }}
+        >
+          {txt.howToPlayPage}
         </a>
       </div>
 

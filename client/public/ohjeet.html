@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piilosana-pelin ohjeet. Opi pelaamaan, pisteytys, pelitilat ja vinkit parempiin tuloksiin.">
+    <title>Peliohjeet — Piilosana</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8582386927565062" crossorigin="anonymous"></script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #1a1a3a; }
+        nav a { color: #00ff88; text-decoration: none; font-size: 0.95rem; transition: opacity 0.2s; }
+        nav a:hover { opacity: 0.75; text-decoration: underline; }
+        nav a.active { color: #e0e0e0; pointer-events: none; }
+        h1 { color: #00ff88; font-size: 2rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
+        h2 { color: #00ff88; font-size: 1.3rem; margin: 2rem 0 0.75rem; }
+        h3 { color: #ccc; font-size: 1.1rem; margin: 1.25rem 0 0.5rem; }
+        p { margin-bottom: 1rem; }
+        ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+        li { margin-bottom: 0.4rem; }
+        a { color: #00ff88; }
+        .tip-box {
+            background: #0d1a0d;
+            border-left: 3px solid #00ff88;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .tip-box strong { color: #00ff88; }
+        .letter-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; }
+        .letter-table th, .letter-table td { padding: 0.5rem 0.75rem; text-align: center; border: 1px solid #1a1a3a; }
+        .letter-table th { background: #111133; color: #00ff88; font-weight: 600; }
+        .letter-table td { background: #0d0d25; }
+        .mode-card {
+            background: #111133;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+        .mode-card h3 { margin-top: 0; color: #00ff88; }
+        .footer-nav { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+        .footer-nav a { color: #00ff88; text-decoration: none; font-size: 0.9rem; }
+        .footer-nav a:hover { text-decoration: underline; }
+        .copyright { margin-top: 1.5rem; color: #555; font-size: 0.85rem; }
+        strong { color: #f0f0f0; }
+        @media (max-width: 480px) {
+            body { padding: 1.25rem 0.75rem; }
+            h1 { font-size: 1.6rem; }
+            .letter-table { font-size: 0.85rem; }
+            .letter-table th, .letter-table td { padding: 0.35rem 0.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Pelaa</a>
+            <a href="/tietoja.html">Tietoja</a>
+            <a class="active" href="/ohjeet.html">Ohjeet</a>
+            <a href="/tietosuoja.html">Tietosuoja</a>
+            <a href="/kayttoehdot.html">Käyttöehdot</a>
+        </nav>
+
+        <h1>Peliohjeet</h1>
+        <p class="subtitle">Opi pelaamaan Piilosanaa ja paranna tuloksiasi</p>
+
+        <h2>Pelin perusteet</h2>
+        <p>Piilosanassa tavoitteenasi on löytää mahdollisimman monta sanaa kirjainruudukosta annetun ajan kuluessa. Pelikenttä on ruudukko, joka koostuu satunnaisista kirjaimista. Muodostat sanoja pyyhkäisemällä sormella tai hiirellä vierekkäisten kirjainten yli.</p>
+
+        <h3>Sanan muodostaminen</h3>
+        <p>Sanan muodostaminen toimii seuraavasti:</p>
+        <ol>
+            <li><strong>Aloita pyyhkäisy:</strong> Paina ensimmäistä kirjainta ja pidä pohjassa (mobiililla) tai pidä hiiren painiketta pohjassa (tietokoneella).</li>
+            <li><strong>Vedä vierekkäisiin kirjaimiin:</strong> Liikuta sormea tai hiirtä viereisiin kirjaimiin. Kirjaimet ovat vierekkäisiä vaaka-, pysty- ja vinosuunnassa, eli jokainen kirjain voi yhdistyä kaikkiin kahdeksaan ympäröivään kirjaimeen.</li>
+            <li><strong>Vapauta hyväksyäksesi:</strong> Kun olet muodostanut sanan, vapauta sormi tai hiiren painike. Jos sana on sanalistassa ja vähintään 3 kirjainta pitkä, se hyväksytään ja saat pisteitä.</li>
+        </ol>
+        <p>Jokaista kirjainruutua voi käyttää vain kerran per sana. Et voi palata saman ruudun kautta kahdesti saman sanan aikana. Kirjainten täytyy muodostaa katkeamaton polku ruudukossa.</p>
+
+        <div class="tip-box">
+            <p><strong>Vinkki:</strong> Sana hylätään, jos se on jo löydetty aiemmin samassa pelissä. Jokainen uniikki sana lasketaan vain kerran.</p>
+        </div>
+
+        <h2>Pisteytys</h2>
+        <p>Piilosanan pisteytys perustuu kahteen tekijään: kirjainten arvoihin ja sanan pituuteen. Jokaisella kirjaimella on oma pistearvonsa, joka perustuu kirjaimen harvinaisuuteen kyseisessä kielessä, samaan tapaan kuin Scrabblessa.</p>
+
+        <h3>Kirjainten arvot (suomi)</h3>
+        <table class="letter-table">
+            <thead>
+                <tr>
+                    <th>Pisteet</th>
+                    <th>Kirjaimet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A, I, N, T, E, S</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>L, O, U, K</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>M, R, H, P</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>V, J, D, Y</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>&Auml;, &Ouml;</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>G, B, F, C</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>W, X, Z, Q</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Pituusbonus</h3>
+        <p>Pitemmät sanat tuottavat enemmän pisteitä kirjainkohtaisten pisteiden lisäksi. Sanan kokonaispisteet lasketaan kertomalla kirjainten yhteisarvo pituuskertoimella:</p>
+        <table class="letter-table">
+            <thead>
+                <tr>
+                    <th>Sanan pituus</th>
+                    <th>Kerroin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>3 kirjainta</td><td>1x</td></tr>
+                <tr><td>4 kirjainta</td><td>1.5x</td></tr>
+                <tr><td>5 kirjainta</td><td>2x</td></tr>
+                <tr><td>6 kirjainta</td><td>3x</td></tr>
+                <tr><td>7+ kirjainta</td><td>5x</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <p><strong>Esimerkki:</strong> Sana "KOIRA" (K=2, O=2, I=1, R=3, A=1) saa kirjainpisteet 9. Viiden kirjaimen kerroin on 2x, joten kokonaispisteet ovat 9 &times; 2 = 18 pistettä.</p>
+        </div>
+
+        <h2>Pelitilat</h2>
+        <p>Piilosana tarjoaa viisi eri pelitilaa, joista jokaisella on omat erityispiirteensä. Eri pelitilat tuovat vaihtelua peliin ja haastavat eri tavoin.</p>
+
+        <div class="mode-card">
+            <h3>Päivittäinen haaste</h3>
+            <p>Päivittäinen haaste on Piilosanan suosituin pelitila. Joka päivä kaikki pelaajat saavat täsmälleen saman kirjainruudukon ratkaistavakseen. Tämä tekee tulosten vertailusta reilua ja mielekästä.</p>
+            <ul>
+                <li>Uusi haaste julkaistaan joka päivä keskiyöllä Suomen aikaa</li>
+                <li>Jokaisella pelaajalla on yksi yritys päivässä</li>
+                <li>Tuloslistat näyttävät päivän parhaat pelaajat reaaliajassa</li>
+                <li>Voit seurata omaa pistekehitystäsi tilastoista</li>
+                <li>Tuloksesi tallennetaan automaattisesti, jos olet kirjautunut sisään</li>
+            </ul>
+        </div>
+
+        <div class="mode-card">
+            <h3>Harjoittelutila</h3>
+            <p>Harjoittelutilassa voit kehittää taitojasi omaan tahtiisi ilman kilpailupainetta. Muokkaa pelin asetuksia omien mieltymystesi mukaan ja kokeile erilaisia strategioita.</p>
+            <ul>
+                <li><strong>Ruudukon koko:</strong> Valitse 4x4, 5x5 tai 6x6 ruudukko. Suuremmat ruudukot tarjoavat enemmän sanamahdollisuuksia mutta ovat myös haastavampia hallita.</li>
+                <li><strong>Aikaraja:</strong> Aseta aikaraja 1-10 minuuttiin tai pelaa ilman aikarajaa.</li>
+                <li><strong>Kirjainkerroin:</strong> Säädä kirjainten pistekerrointa helpommaksi tai vaikeammaksi.</li>
+            </ul>
+            <p>Harjoittelutuloksia ei tallenneta tuloslistoille, joten voit kokeilla rauhassa.</p>
+        </div>
+
+        <div class="mode-card">
+            <h3>Moninpeli (Arena)</h3>
+            <p>Moninpelissä kilpailet reaaliaikaisesti muita pelaajia vastaan. Kaikki pelaavat samaa ruudukkoa samanaikaisesti, ja tulokset päivittyvät reaaliajassa.</p>
+            <ul>
+                <li><strong>Luo peli:</strong> Luo uusi moninpeli ja saat kutsulinkkin sekä QR-koodin, jonka voit jakaa ystävillesi.</li>
+                <li><strong>Liity peliin:</strong> Avaa kutsulinkkki tai skannaa QR-koodi liittyäksesi ystäväsi peliin.</li>
+                <li>Näet muiden pelaajien pisteet reaaliajassa pelin aikana</li>
+                <li>Pelin lopussa näet kaikkien löytämät sanat ja vertailun</li>
+                <li>WebSocket-teknologia takaa viiveettömän pelikokemuksen</li>
+            </ul>
+        </div>
+
+        <h2>Erikoistilat</h2>
+        <p>Erikoistilat tuovat peliin uusia mekaniikkoja ja strategioita. Jokainen erikoistila muuttaa pelin peruslogiikkaa tavalla, joka vaatii erilaista lähestymistapaa.</p>
+
+        <div class="mode-card">
+            <h3>Kierto (Rotation)</h3>
+            <p>Kiertotilassa voit pyörittää ruudukon rivejä ja sarakkeita luodaksesi uusia kirjainyhdistelmiä. Napauta rivin tai sarakkeen reunaa siirtääksesi kirjaimia. Tämä avaa uusia sanamahdollisuuksia, joita alkuperäisessä ruudukossa ei olisi. Strateginen rivien ja sarakkeiden pyörittäminen on avain huipputuloksiin.</p>
+            <p>Kierto vie yhden siirron, joten mieti tarkkaan milloin pyörität. Yhdellä taitavalla kierrolla voit avata useita uusia pitkiä sanoja kerralla.</p>
+        </div>
+
+        <div class="mode-card">
+            <h3>Teemat (Themes)</h3>
+            <p>Teematilassa tiettyyn aihepiiriin kuuluvat sanat antavat bonuspisteitä. Aihepiiri voi olla esimerkiksi eläimet, ruoka, luonto tai ammatit. Teema paljastetaan pelin alussa, ja sinun tehtäväsi on löytää mahdollisimman monta teemaan liittyvää sanaa.</p>
+            <p>Teemaan kuuluvat sanat saavat kaksinkertaiset pisteet, joten niiden löytäminen on erityisen arvokasta. Muutkin sanat kelpaavat normaalein pistein, mutta parhaat tulokset syntyvät teemaan keskittymällä.</p>
+        </div>
+
+        <div class="mode-card">
+            <h3>Pommi (Bomb)</h3>
+            <p>Pommitilassa yksi ruudukon kirjaimista on pommi, joka näkyy hehkuvana. Pommilla on ajastin, ja kun aika loppuu, pommi räjähtää ja peli päättyy. Ainoa tapa purkaa pommi on käyttää pommikirjain osana sanaa.</p>
+            <p>Kun pommi puretaan, uusi pommikirjain ilmestyy ruudukolle. Peli jatkuu niin kauan kuin ehdit purkaa pommit. Mitä pidemmälle pääset, sitä nopeammin pommit räjähtävät, mikä tekee pelistä jatkuvasti haastavamman.</p>
+        </div>
+
+        <div class="mode-card">
+            <h3>Mysteeri (Mystery)</h3>
+            <p>Mysteeritilassa osa ruudukon kirjaimista on piilotettu mysteerimerkein. Et tiedä mitä kirjaimia niiden takana on, ennen kuin käytät ne osana sanaa. Kun muodostat sanan, joka kulkee mysteerikirjaimen kautta, kirjain paljastuu.</p>
+            <p>Tämä tila vaatii päättelykykyä ja rohkeita arvauksia. Selvitä mysteerikirjaimet yhdistelemällä tietoa löytämistäsi sanoista ja ympäröivistä kirjaimista. Jokainen paljastettu kirjain avaa uusia mahdollisuuksia.</p>
+        </div>
+
+        <div class="mode-card">
+            <h3>Shakki (Chess)</h3>
+            <p>Shakkitilassa ruudukon päällä on shakkinappula, jota liikutat vuorotellen. Nappula liikkuu shakkisääntöjen mukaisesti (esimerkiksi ratsu L-kirjaimen muotoisesti, lähetti vinottain). Kerää kirjaimia nappulan reitillä ja muodosta sanoja keräämistäsi kirjaimista.</p>
+            <p>Shakkitila yhdistää strategisen ajattelun ja sananmuodostuksen ainutlaatuisella tavalla. Suunnittele reittisi niin, että keräät oikeat kirjaimet pitkien ja arvokkaiden sanojen muodostamiseksi. Jokainen siirto on tärkeä, sillä liikkeitä on rajoitettu määrä.</p>
+        </div>
+
+        <h2>Vinkit ja strategiat</h2>
+        <p>Näillä vinkeillä pääset alkuun ja parannat tuloksiasi:</p>
+
+        <h3>Aloittelijoille</h3>
+        <ul>
+            <li><strong>Aloita lyhyistä sanoista:</strong> Etsi ensin kolmen ja neljän kirjaimen sanoja. Ne ovat helpointa löytää ja kerryttävät pisteitä tasaisesti.</li>
+            <li><strong>Etsi yleisiä päätteitä:</strong> Suomen kielessä yleiset päätteet kuten -ssa, -lla, -nen ja -inen auttavat löytämään taivutusmuotoja.</li>
+            <li><strong>Käytä koko ruudukkoa:</strong> Älä keskity vain yhteen kulmaan. Skannaa koko ruudukko järjestelmällisesti.</li>
+            <li><strong>Harjoittele päivittäin:</strong> Säännöllinen pelaaminen parantaa hahmontunnistustasi ja sanavarastoasi nopeasti.</li>
+        </ul>
+
+        <h3>Edistyneille pelaajille</h3>
+        <ul>
+            <li><strong>Priorisoi pitkät sanat:</strong> Pitkät sanat antavat merkittävästi enemmän pisteitä pituuskertoimen ansiosta. Kuuden kirjaimen sana on kolme kertaa arvokkaampi kuin kolmen kirjaimen sana samasta kirjainmateriaalista.</li>
+            <li><strong>Opettele harvinaiset kirjaimet:</strong> Jos ruudukossa on harvinaisia kirjaimia (kuten G, B tai F), etsi sanoja jotka hyödyntävät niitä. Korkean pistearvon kirjaimet nostavat sanan kokonaispistemäärää merkittävästi.</li>
+            <li><strong>Taivutusmuodot ovat ystäväsi:</strong> Suomen kielen rikas taivutusjärjestelmä on valtava etu. Jos löydät sanan "koti", etsi myös "kodin", "kotia", "kotiin" ja muut taivutusmuodot samasta alueesta.</li>
+            <li><strong>Yhdyssanat:</strong> Suomen kielen yhdyssanat voivat olla pitkiä ja erittäin arvokkaita. Yhdistä kaksi lyhyempää sanaa, jos ne sattuvat olemaan vierekkäin ruudukossa.</li>
+            <li><strong>Hallitse aikasi:</strong> Älä käytä liikaa aikaa yhden vaikean sanan etsimiseen. Jos et löydä sanaa nopeasti, siirry eteenpäin ja palaa myöhemmin.</li>
+        </ul>
+
+        <h3>Moninpelivinkit</h3>
+        <ul>
+            <li><strong>Nopeus ratkaisee:</strong> Moninpelissä nopeus on tärkeää, mutta pitkät sanat ovat silti arvokkaampia. Löydä tasapaino nopeuden ja sanan pituuden välillä.</li>
+            <li><strong>Seuraa vastustajia:</strong> Näet muiden pisteet reaaliajassa. Jos olet jäljessä, keskity pitkiin sanoihin saadaksesi kiinni.</li>
+            <li><strong>Aloita tutuista kulmista:</strong> Aloita ruudukon alueelta, jossa näet heti selkeitä sanoja, ja laajenna siitä.</li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>Paras vinkki:</strong> Pelaa joka päivä! Sanapelit ovat taitolaji, ja säännöllinen harjoittelu parantaa hahmontunnistustasi, sanavarastoasi ja nopeuttasi. Päivittäinen haaste on erinomainen tapa pitää taidot terässä.</p>
+        </div>
+
+        <h2>Usein kysytyt kysymykset</h2>
+
+        <h3>Miksi sanani ei hyväksytty?</h3>
+        <p>Sana ei hyväksytä, jos sitä ei löydy sanalistasta, se on alle 3 kirjainta pitkä, olet jo löytänyt sen aiemmin samassa pelissä tai kirjainpolku ei ole yhtenäinen (kirjaimet eivät ole vierekkäisiä).</p>
+
+        <h3>Voiko peliä pelata ilman rekisteröitymistä?</h3>
+        <p>Kyllä! Voit pelata harjoittelutilaa ja päivittäistä haastetta ilman rekisteröitymistä. Rekisteröityminen mahdollistaa tulosten tallentamisen, tuloslistoilla näkymisen ja moninpeliin osallistumisen.</p>
+
+        <h3>Miten moninpeli toimii?</h3>
+        <p>Luo moninpeli ja jaa kutsulinkkki tai QR-koodi ystävillesi. Kun kaikki pelaajat ovat liittyneet, peli alkaa ja kaikki pelaavat samaa ruudukkoa samanaikaisesti. Tulokset näkyvät reaaliajassa.</p>
+
+        <h3>Onko peli ilmainen?</h3>
+        <p>Kyllä, Piilosana on täysin ilmainen. Palvelua rahoitetaan mainoksilla. Voit tukea peliä sallimalla mainokset selaimessasi.</p>
+
+        <p>Etkö löytänyt vastausta? Ota yhteyttä: <a href="mailto:info@piilosana.com">info@piilosana.com</a></p>
+
+        <div class="tip-box">
+            <p><strong>Valmis pelaamaan?</strong> Nyt kun tiedät säännöt, on aika kokeilla käytännössä!</p>
+            <p style="margin-bottom:0"><a href="/" style="font-size: 1.1rem; font-weight: bold;">Pelaa Piilosanaa &rarr;</a></p>
+        </div>
+
+        <div class="footer-nav">
+            <a href="/">Pelaa</a>
+            <a href="/tietoja.html">Tietoja</a>
+            <a href="/ohjeet.html">Ohjeet</a>
+            <a href="/tietosuoja.html">Tietosuoja</a>
+            <a href="/kayttoehdot.html">Käyttöehdot</a>
+        </div>
+        <p class="copyright">&copy; 2026 Piilosana — Matti Kuokkanen</p>
+    </div>
+</body>
+</html>
