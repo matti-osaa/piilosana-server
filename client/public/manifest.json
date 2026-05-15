@@ -1,6 +1,6 @@
 {
-  "name": "Piilosana — Sanapeli",
-  "short_name": "Piilosana",
+  "name": "Sanapiilo — Sanapeli",
+  "short_name": "Sanapiilo",
   "description": "Löydä piilotettuja sanoja ruudukosta! Pelaa yksin tai haasta kaverit areenalla.",
   "start_url": "/",
   "display": "standalone",

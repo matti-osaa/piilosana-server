@@ -17,19 +17,19 @@
 
 const TEXTS = {
   fi: {
-    title: "Tervetuloa Piilosanaan!",
+    title: "Tervetuloa Sanapiiloon!",
     body: "Vedä sormi kirjainten yli ja etsi sanoja. Mitä pidempi sana, sitä enemmän pisteitä.",
     cta: "Aloita harjoittelulla",
     hint: "Päivän haaste on alla – se on yksi yritys per päivä, joten kokeile peliä ensin tästä.",
   },
   sv: {
-    title: "Välkommen till Piilosana!",
+    title: "Välkommen till Sanapiilo!",
     body: "Dra med fingret över bokstäverna och hitta ord. Ju längre ord desto mer poäng.",
     cta: "Starta med övning",
     hint: "Dagens utmaning är nedanför – den är ett försök per dag, så prova spelet här först.",
   },
   en: {
-    title: "Welcome to Piilosana!",
+    title: "Welcome to Sanapiilo!",
     body: "Drag your finger across the letters to find words. Longer words mean more points.",
     cta: "Start with practice",
     hint: "Today's challenge is below — it's one attempt per day, so try the game here first.",

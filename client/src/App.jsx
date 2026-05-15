@@ -25,7 +25,7 @@ import { AuthPanel } from "./components/AuthPanel.jsx";
 import { LobbyEnterName, LobbyChoose, LobbyWaiting } from "./components/MultiplayerLobby.jsx";
 
 // ============================================
-// PIILOSANA - Finnish Word Hunt Game
+// SANAPIILO - Finnish Word Hunt Game
 // ============================================
 
 const VERSION = "2.1.0";
@@ -347,7 +347,7 @@ const T={
     openGames:"AVOIMET PELIT",roomFull:"Huone on täynnä",gameInProgress:"Peli on jo käynnissä",roomNotFound:"Huonetta ei löydy",
     someoneBeatYou:"Joku ehti ensin!",tooShort:"Liian lyhyt",notInGrid:"Ei löydy ruudukosta",wrongMode:"Väärä moodi",gameNotRunning:"Peli ei käynnissä",
     achievements:"SAAVUTUKSET",achievementUnlocked:"Uusi saavutus!",locked:"Lukittu",
-    share:"JAA TULOS",shareCopied:"Kopioitu!",shareText:"Piilosana – löysin {words} sanaa ja sain {score} pistettä! Pääsetkö parempaan?",
+    share:"JAA TULOS",shareCopied:"Kopioitu!",shareText:"Sanapiilo – löysin {words} sanaa ja sain {score} pistettä! Pääsetkö parempaan?",
     options:"ASETUKSET",quickPlay:"PELAA",or:"tai",advancedOptions:"Lisävalinnat",
     readMoreWords:"Lue lisää sanoista",
     wordInfoTitle:"SANALISTASTA",
@@ -411,7 +411,7 @@ const T={
     openGames:"OPEN GAMES",roomFull:"Room is full",gameInProgress:"Game already in progress",roomNotFound:"Room not found",
     someoneBeatYou:"Someone got it first!",tooShort:"Too short",notInGrid:"Not found in grid",wrongMode:"Wrong mode",gameNotRunning:"Game not running",
     achievements:"ACHIEVEMENTS",achievementUnlocked:"New achievement!",locked:"Locked",
-    share:"SHARE",shareCopied:"Copied!",shareText:"Piilosana — I found {words} words and scored {score} points! Can you beat me?",
+    share:"SHARE",shareCopied:"Copied!",shareText:"Sanapiilo — I found {words} words and scored {score} points! Can you beat me?",
     options:"SETTINGS",quickPlay:"PLAY",or:"or",advancedOptions:"More options",
     readMoreWords:"Read more about the words",
     wordInfoTitle:"ABOUT THE WORD LIST",
@@ -475,7 +475,7 @@ const T={
     openGames:"ÖPPNA SPEL",roomFull:"Rummet är fullt",gameInProgress:"Spelet pågår redan",roomNotFound:"Rummet hittades inte",
     someoneBeatYou:"Någon hann före!",tooShort:"För kort",notInGrid:"Finns inte i rutnätet",wrongMode:"Fel läge",gameNotRunning:"Spelet är inte igång",
     achievements:"PRESTATIONER",achievementUnlocked:"Ny prestation!",locked:"Låst",
-    share:"DELA",shareCopied:"Kopierat!",shareText:"Piilosana – jag hittade {words} ord och fick {score} poäng! Kan du slå mig?",
+    share:"DELA",shareCopied:"Kopierat!",shareText:"Sanapiilo – jag hittade {words} ord och fick {score} poäng! Kan du slå mig?",
     options:"INSTÄLLNINGAR",quickPlay:"SPELA",or:"eller",advancedOptions:"Fler alternativ",
     readMoreWords:"Läs mer om orden",
     wordInfoTitle:"OM ORDLISTAN",
@@ -1165,15 +1165,15 @@ function titleColor(i,len){
 function titleShadow(color){return `2px 2px 0 ${color}44, 0 0 16px ${color}66`;}
 const TITLE_CONFIG={
   fi:{
-    title:"PIILOSANA",
-    gearIdx:4, // the O in PIIL⚙SANA
+    title:"SANAPIILO",
+    gearIdx:4, // the P in SANA⚙IILO
+    // S(0) A(1) N(2) A(3) P(4) I(5) I(6) L(7) O(8)
     demos:[
-      {word:"PII",indices:[0,1,2],color:"#44ff88"},
-      {word:"ILO",indices:[2,3,4],color:"#4488ff"},
-      {word:"OSA",indices:[4,5,6],color:"#ff8844"},
-      {word:"SANA",indices:[5,6,7,8],color:"#ff44cc"},
-      {word:"PIILO",indices:[0,1,2,3,4],color:"#ffcc00"},
-      {word:"PIILOSANA",indices:[0,1,2,3,4,5,6,7,8],color:"#ff6644"},
+      {word:"SANA",indices:[0,1,2,3],color:"#44ff88"},
+      {word:"PII",indices:[4,5,6],color:"#4488ff"},
+      {word:"ILO",indices:[6,7,8],color:"#ff8844"},
+      {word:"PIILO",indices:[4,5,6,7,8],color:"#ff44cc"},
+      {word:"SANAPIILO",indices:[0,1,2,3,4,5,6,7,8],color:"#ff6644"},
     ]
   },
   en:{
@@ -2653,8 +2653,8 @@ export default function Piilosana(){
     const streak=getDailyStreak(lang);
     const themeStr=dailyTheme?` (${dailyTheme.name})`:"";
     const bonusStr=dailyThemeBonusGiven?` 🎯 Teemabonus +${DAILY_THEME_BONUS}p!`:"";
-    const text=`Sain ${dl.full} päivän piilosanassa${themeStr} ${dr.score} pistettä (${dr.wordsFound}/${dr.totalWords} sanaa)!${bonusStr} Pystytkö parempaan?${streak.streak>1?` 🔥 ${streak.streak} päivää putkeen!`:""}\n\nPelaa: https://piilosana.com`;
-    if(navigator.share){navigator.share({title:`Päivän Piilosana – ${dl.full}`,text}).catch(()=>{});}
+    const text=`Sain ${dl.full} Sanapiilossa${themeStr} ${dr.score} pistettä (${dr.wordsFound}/${dr.totalWords} sanaa)!${bonusStr} Pystytkö parempaan?${streak.streak>1?` 🔥 ${streak.streak} päivää putkeen!`:""}\n\nPelaa: https://piilosana.com`;
+    if(navigator.share){navigator.share({title:`Päivän Sanapiilo – ${dl.full}`,text}).catch(()=>{});}
     else{navigator.clipboard.writeText(text).then(()=>setDailyShareMsg(t.dailyCopied)).catch(()=>{});setTimeout(()=>setDailyShareMsg(null),2000);}
   },[t,lang,dailyDate,dailyTheme,dailyThemeBonusGiven]);
 
